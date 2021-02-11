@@ -7,25 +7,36 @@ public class Solution {
 
     public static int method1() {
         method2();
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        String n = stackTraceElements[2].getMethodName();
+        int s = stackTraceElements[2].getLineNumber();
+        return s;
     }
 
     public static int method2() {
         method3();
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        int s = stackTraceElements[1].getLineNumber();
+        return s;
     }
 
     public static int method3() {
         method4();
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        int s = stackTraceElements[1].getLineNumber();
+        return s;
     }
 
     public static int method4() {
         method5();
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        int s = stackTraceElements[1].getLineNumber();
+        return s;
     }
 
     public static int method5() {
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        int s = stackTraceElements[1].getLineNumber();
+        return s;
     }
 }
